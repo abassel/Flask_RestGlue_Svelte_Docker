@@ -35,9 +35,9 @@ jobs:
         uses: "actions/github-script@v3.1"
         with:
           github-token: ${{github.token}}
-          env:
-            URL: ${{ github.event.issue.comments_url }}
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        env:
+          URL: ${{ github.event.issue.comments_url }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           script: |
             curl \
               -X POST \
