@@ -33,15 +33,15 @@ jobs:
     steps:
       - name: "Merge pull request via comment to dependabot"
         uses: "actions/github-script@v3.1"
-        with:
-          github-token: ${{github.token}}
         env:
           URL: ${{ github.event.issue.comments_url }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        script: |
-          curl \
-            -X POST \
-            $URL \
-            -H "Content-Type: application/json" \
-            -H "Authorization: token $GITHUB_TOKEN" \
-            --data '{ "body": "@dependabot merge" }'
+        with:
+          github-token: ${{github.token}}
+          script: |
+            curl \
+              -X POST \
+              $URL \
+              -H "Content-Type: application/json" \
+              -H "Authorization: token $GITHUB_TOKEN" \
+              --data '{ "body": "@dependabot merge" }'
