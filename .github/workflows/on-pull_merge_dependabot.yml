@@ -32,6 +32,7 @@ jobs:
 
     steps:
       - name: "Merge pull request via comment to dependabot"
+        uses: "actions/github-script@v3.1"
         env:
           URL: ${{ github.event.issue.comments_url }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
