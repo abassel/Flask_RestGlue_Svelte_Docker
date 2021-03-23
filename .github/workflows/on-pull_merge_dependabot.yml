@@ -1,4 +1,11 @@
 
+# During March merges were blocked, thus we use different approach
+
+# New approach
+# https://stackoverflow.com/questions/58066966/commenting-a-pull-request-in-a-github-action
+
+# Old approach
+
 # https://handsonappsec.medium.com/automerge-github-dependabot-alerts-with-github-actions-7cd6f5763750
 # https://localheinz.com/blog/2020/06/15/merging-pull-requests-with-github-actions/
 # https://blog.sapegin.me/til/misc/automatically-merging-dependabot-security-pull-requests-using-github-actions/
@@ -24,17 +31,17 @@ jobs:
       )
 
     steps:
-      - name: "Merge pull request"
-        uses: "actions/github-script@v2"
+      - name: "Merge pull request via comment to dependabot"
+        uses: "actions/github-script@v3.1"
         with:
           github-token: ${{github.token}}
+          env:
+            URL: ${{ github.event.issue.comments_url }}
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            const pullRequest = context.payload.pull_request
-            const repository = context.repo
-
-            await github.pulls.merge({
-              merge_method: "merge",
-              owner: repository.owner,
-              pull_number: pullRequest.number,
-              repo: repository.repo,
-            })
+            curl \
+              -X POST \
+              $URL \
+              -H "Content-Type: application/json" \
+              -H "Authorization: token $GITHUB_TOKEN" \
+              --data '{ "body": "@dependabot merge" }'
