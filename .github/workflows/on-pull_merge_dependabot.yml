@@ -38,10 +38,10 @@ jobs:
         env:
           URL: ${{ github.event.issue.comments_url }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            curl \
-              -X POST \
-              $URL \
-              -H "Content-Type: application/json" \
-              -H "Authorization: token $GITHUB_TOKEN" \
-              --data '{ "body": "@dependabot merge" }'
+        script: |
+          curl \
+            -X POST \
+            $URL \
+            -H "Content-Type: application/json" \
+            -H "Authorization: token $GITHUB_TOKEN" \
+            --data '{ "body": "@dependabot merge" }'
