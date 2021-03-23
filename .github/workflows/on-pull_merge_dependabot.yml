@@ -38,7 +38,7 @@ jobs:
         run: |
           curl \
             -X POST \
-          "$URL \
+          $URL \
             -H "Content-Type: application/json" \
             -H "Authorization: token $GITHUB_TOKEN" \
-            --data '{ "body": "@dependabot merge" }'
+            --data '{ "body": "@dependabot merge"}'
