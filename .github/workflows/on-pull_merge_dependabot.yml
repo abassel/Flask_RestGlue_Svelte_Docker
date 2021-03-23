@@ -2,6 +2,7 @@
 # During March merges were blocked, thus we use different approach
 
 # New approach
+# https://github.com/actions/github-script#comment-on-an-issue
 # https://stackoverflow.com/questions/58066966/commenting-a-pull-request-in-a-github-action
 
 # Old approach
@@ -31,17 +32,14 @@ jobs:
       )
 
     steps:
-       - name: "Merge pull request via comment to dependabot"
-         uses: "actions/github-script@v3.1"
-         env:
-           URL: ${{ github.event.issue.comments_url }}
-           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-         with:
-           github-token: ${{github.token}}
-           script: |
-             curl \
-               -X POST \
-               $URL \
-               -H "Content-Type: application/json" \
-               -H "Authorization: token $GITHUB_TOKEN" \
-               --data '{ "body": "@dependabot merge" }'
+      - name: "Merge pull request via comment to dependabot"
+        uses: "actions/github-script@v3.1"
+        with:
+            github-token: ${{secrets.GITHUB_TOKEN}}
+            script: |
+              github.issues.createComment({
+                issue_number: context.issue.number,
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                body: "@dependabot merge"
+              })
