@@ -42,5 +42,5 @@ jobs:
             -X POST \
             $URL \
             -H "Content-Type: application/json" \
-            -H "Authorization: token $GITHUB_TOKEN" \
+            -H "Authorization: token ${{ secrets.COMMENTS }}" \
             --data '{ "body": "@dependabot merge"}'
