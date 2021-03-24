@@ -36,11 +36,11 @@ jobs:
       - name: "Merge pull request via comment to dependabot"
         env:
           URL: ${{ github.event.pull_request.comments_url }}
-          GITHUB_TOKEN: ${{ secrets.COMMENTS }}
+          _TOKEN: ${{ secrets.COMMENTS }}
         run: |
           curl \
             -X POST \
             $URL \
             -H "Content-Type: application/json" \
-            -H "Authorization: token $GITHUB_TOKEN" \
+            -H "Authorization: token $_TOKEN" \
             --data '{ "body": "@dependabot merge"}'
