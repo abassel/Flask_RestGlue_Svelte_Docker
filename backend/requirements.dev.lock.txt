@@ -7,7 +7,7 @@ click==8.0.0
 colorama==0.4.4
 flask-restglue==0.0.4
 iniconfig==1.1.1
-itsdangerous==1.1.0
+itsdangerous==2.0.0
 mongoengine==0.23.1
 mongomock==3.22.1
 packaging==20.9
