@@ -2,7 +2,7 @@ Flask==2.0.0
 Jinja2==3.0.0
 MarkupSafe==2.0.0
 Werkzeug==2.0.0
-attrs==20.3.0
+attrs==21.2.0
 click==8.0.0
 colorama==0.4.4
 flask-restglue==0.0.4
