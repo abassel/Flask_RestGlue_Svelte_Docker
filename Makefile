@@ -36,12 +36,15 @@ endif
 
 
 # https://swcarpentry.github.io/make-novice/08-self-doc/index.html
+# https://marmelab.com/blog/2016/02/29/auto-documented-makefile.html
 ## ❓  help											: This help
 .PHONY : help
 help : Makefile
-	@sed -n 's/^##//p' $<
-#	@egrep --color=always "^##" $<
-
+	@echo "${YELLOW}Available rules:${RESET}"
+	@echo
+	@ #sed -n 's/^##//p' $<
+	@#grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
+	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
 .PHONY: colors
 colors: ## show all the colors
@@ -64,17 +67,16 @@ dev_box_setup:
 	@(cd frontend; make node_dev_box_setup)
 
 
-## 🌊  build-docker												: Build images so composer can use them
+
 .PHONY: build-docker
-build-docker:
+build-docker: ## 🌊 Build images so composer can use them
 	@(cd backend; make build-docker)
 	@(cd frontend; make build-docker)
 
 
 
-## 🌊  run-composer												: Build images so composer can use them
 .PHONY: run-composer
-run-composer:
+run-composer: ## 🌊 Build images so composer can use them
 	@docker-compose up -d
 
 
@@ -90,7 +92,7 @@ run-composer:
 #	#$(BLACK_COMMAND_FLAG)poetry run black --config pyproject.toml --diff --check ./
 #	$(DARGLINT_COMMAND_FLAG)poetry run darglint -v 2 **/*.py
 #	$(ISORT_COMMAND_FLAG)poetry run isort --settings-path pyproject.toml --check-only **/*.py
-##	$(MYPY_COMMAND_FLAG)poetry run mypy --config-file setup.cfg flask_rest_glue tests/**.py
+#	$(MYPY_COMMAND_FLAG)poetry run mypy --config-file setup.cfg flask_rest_glue tests/**.py
 #
 #.PHONY: codestyle
 #codestyle:
@@ -124,8 +126,8 @@ run-composer:
 #	@echo Removing docker $(IMAGE):$(VERSION) ...
 #	docker rmi -f $(IMAGE):$(VERSION)
 
-.PHONY: clean_build
-clean_build:
+.PHONY: clean
+clean: ## 🗑  Remove auto-generated files.
 	@echo "> 💥 ${RED}Cleaning related folders/files...${RESET}"
 #	@echo \> Cleaning ....
 	@find ./ -type f -name '*.pyc' -delete
@@ -145,7 +147,3 @@ clean_build:
 	@rm -rf sdist/
 	@echo \> "${GREEN}... Done!${RESET}"
 
-
-## 🗑  clean											: Remove auto-generated files.
-.PHONY: clean
-clean: clean_build #clean_docker
