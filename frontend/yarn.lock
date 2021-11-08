@@ -618,10 +618,10 @@ once@^1.3.0:
   dependencies:
     wrappy "1"
 
-openapi-client-axios@^4.0.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/openapi-client-axios/-/openapi-client-axios-4.1.0.tgz#a95e8e1d9e10ee6a0453f38c3ba77eee15509552"
-  integrity sha512-DMoEwtSlcrRoV5K20dR/zH5ozJsBl1jWYqeBL9JZTwnBtLbLariiTWaBV898kq3TyzAnU8bSsPzcRxBIBGwSSQ==
+openapi-client-axios@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/openapi-client-axios/-/openapi-client-axios-4.2.0.tgz#14a0a97c2ff978479036cf44a25fcc35f3288175"
+  integrity sha512-mbphv2JUZib8nk2cAQbvWP/Pw2RycCZWMHyjDkEq/Sdmm8cDxyOPRjjsVuwHY6VqxR2hVakzq7oRNMIGaX+Q6A==
   dependencies:
     "@apidevtools/json-schema-ref-parser" "^9.0.7"
     bath-es5 "^3.0.3"
