@@ -3,7 +3,7 @@ Jinja2==3.0.3
 MarkupSafe==2.1.0
 Werkzeug==2.0.3
 attrs==21.4.0
-click==8.0.3
+click==8.0.4
 colorama==0.4.4
 flask-restglue==0.0.4
 iniconfig==1.1.1
