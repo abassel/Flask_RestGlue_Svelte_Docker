@@ -13,7 +13,7 @@ mongomock==3.22.1
 packaging==21.3
 pluggy==1.0.0
 py==1.11.0
-pymongo==4.0.2
+pymongo==4.1.0
 pyparsing==3.0.7
 pytest==6.2.2
 sentinels==1.0.0
