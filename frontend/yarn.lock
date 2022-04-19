@@ -547,9 +547,9 @@ kleur@^4.1.4:
   integrity sha512-8QADVssbrFjivHWQU7KkMgptGTl6WAcSdlbBPY4uNF+mWr6DGcKrvY2w4FQJoXch7+fKMjj0dRrL75vk3k23OA==
 
 livereload-js@^3.3.1:
-  version "3.3.3"
-  resolved "https://registry.yarnpkg.com/livereload-js/-/livereload-js-3.3.3.tgz#3e4f5699f741fdf8be6dc9c46c523e4fc1abbd0d"
-  integrity sha512-a7Jipme3XIBIryJluWP5LQrEAvhobDPyScBe+q+MYwxBiMT2Ck7msy4tAdF8TAa33FMdJqX4guP81Yhiu6BkmQ==
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/livereload-js/-/livereload-js-3.4.0.tgz#2083158125f16fb5207141bbadb9bdc26cfdb1ef"
+  integrity sha512-F/pz9ZZP+R+arY94cECTZco7PXgBXyL+KVWUPZq8AQE9TOu14GV6fYeKOviv02JCvFa4Oi3Rs1hYEpfeajc+ow==
 
 livereload@^0.9.1:
   version "0.9.3"
