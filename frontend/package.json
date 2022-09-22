@@ -20,7 +20,7 @@
     "svelte": "^3.50.1"
   },
   "dependencies": {
-    "bootstrap": "^4.6.1",
+    "bootstrap": "^4.6.2",
     "openapi-client-axios": "^5.1.2",
     "sirv-cli": "^2.0.2"
   }
