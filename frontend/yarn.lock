@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@anttiviljami/json-schema-ref-parser@^9.2.1":
-  version "9.2.1"
-  resolved "https://registry.yarnpkg.com/@anttiviljami/json-schema-ref-parser/-/json-schema-ref-parser-9.2.1.tgz#8d94c5876d0880fdb8fbfbbcea7208ea93dcc7f0"
-  integrity sha512-OIHsIMr0p/4Clttig0BEe/LQ46efxUIdr7/2ZpRzvtv73vqn0VLeTNVyqfYX9QHl8raybdadRx6Z3HVQrAjFag==
+"@anttiviljami/json-schema-ref-parser@^9.2.2":
+  version "9.2.2"
+  resolved "https://registry.yarnpkg.com/@anttiviljami/json-schema-ref-parser/-/json-schema-ref-parser-9.2.2.tgz#5172b5bef631969114cf0f882002626556e8fc1e"
+  integrity sha512-YmukqZd3JbZtlna0sS/+YO+17p/AkzLSxuvpQYbBV2f33upbksbKDct6ENmLcV7ZCayTNj+UASGXUJJyrlnaSQ==
   dependencies:
     "@jsdevtools/ono" "^7.1.3"
     "@types/json-schema" "^7.0.6"
@@ -678,12 +678,12 @@ once@^1.3.0:
   dependencies:
     wrappy "1"
 
-openapi-client-axios@^6.1.4:
-  version "6.1.4"
-  resolved "https://registry.yarnpkg.com/openapi-client-axios/-/openapi-client-axios-6.1.4.tgz#b3b0527b309799bfac317e4baa3c18cb36a20867"
-  integrity sha512-6inJ+0gq3JnUlllSGF0c1hzRRwCz+YFVPBUDsBcapfPLlVw7u0Rxb5YaBYMPAS3nz9tKKn5NaXsqTlr7BY7TYA==
+openapi-client-axios@^6.1.5:
+  version "6.1.5"
+  resolved "https://registry.yarnpkg.com/openapi-client-axios/-/openapi-client-axios-6.1.5.tgz#4e4e3ccfe56aed0389a1b9cd08bc1084181f5adb"
+  integrity sha512-QNwB6czTFZZ/DdWmU+Ids64kwjFVN0TAzZFNvs2qlAAnCtGvkUje8rjbvwUv+64eo12QYNuKbtdEPg/hao1yQQ==
   dependencies:
-    "@anttiviljami/json-schema-ref-parser" "^9.2.1"
+    "@anttiviljami/json-schema-ref-parser" "^9.2.2"
     bath-es5 "^3.0.3"
     copy-anything "^3.0.2"
     openapi-types "^12.0.2"
