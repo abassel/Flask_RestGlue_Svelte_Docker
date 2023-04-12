@@ -7,7 +7,7 @@
     "start": "sirv public"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^24.0.1",
+    "@rollup/plugin-commonjs": "^24.1.0",
     "@rollup/plugin-node-resolve": "^15.0.2",
     "rollup": "^2.79.1",
     "rollup-plugin-copy": "^3.4.0",
