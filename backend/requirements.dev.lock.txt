@@ -14,7 +14,7 @@ packaging==23.1
 pluggy==1.0.0
 py==1.11.0
 pymongo==4.3.3
-pyparsing==3.0.9
+pyparsing==3.1.0
 pytest==7.3.2
 sentinels==1.0.0
 shellingham==1.5.1
