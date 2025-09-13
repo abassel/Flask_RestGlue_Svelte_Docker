@@ -22,6 +22,6 @@
   "dependencies": {
     "bootstrap": "^4.6.1",
     "openapi-client-axios": "^7.5.5",
-    "sirv-cli": "^2.0.2"
+    "sirv-cli": "^3.0.0"
   }
 }
